@@ -1,21 +1,47 @@
 {
-  "name": "base-shop",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "autoprefixer": "10.4.14",
-    "eslint": "8.38.0",
-    "eslint-config-next": "13.3.0",
-    "next": "13.3.0",
-    "postcss": "8.4.21",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "tailwindcss": "3.3.1"
-  }
+    "name": "base-shop",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "export": "next export",
+        "start": "next start",
+        "lint": "next lint",
+        "postinstall": "husky install",
+        "release": "standard-version",
+        "release:minor": "standard-version --release-as minor",
+        "release:patch": "standard-version --release-as patch",
+        "release:major": "standard-version --release-as major",
+        "push-release": "git push --follow-tags origin develop"
+    },
+    "dependencies": {
+        "autoprefixer": "10.4.14",
+        "next": "13.3.0",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "tailwindcss": "3.3.1"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "17.6.0",
+        "@commitlint/config-conventional": "17.6.0",
+        "autoprefixer": "10.4.14",
+        "eslint": "8.38.0",
+        "eslint-config-next": "13.3.0",
+        "eslint-config-prettier": "8.8.0",
+        "eslint-config-react-app": "7.0.1",
+        "eslint-config-standard": "17.0.0",
+        "eslint-plugin-import": "2.27.5",
+        "eslint-plugin-node": "11.1.0",
+        "eslint-plugin-prettier": "4.2.1",
+        "eslint-plugin-promise": "6.1.1",
+        "eslint-plugin-react": "7.32.2",
+        "husky": "8.0.3",
+        "lint-staged": "13.2.1",
+        "next-sitemap": "4.0.7",
+        "postcss": "8.4.21",
+        "prettier": "2.8.7",
+        "sass": "1.62.0",
+        "standard-version": "9.5.0"
+    }
 }
