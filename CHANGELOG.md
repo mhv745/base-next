@@ -1,4 +1,11 @@
 CHANGELOG
+## [1.1.0](https://github.com/mhv745/base-next/compare/v0.1.1...v1.1.0) (2023-04-14)
+
+
+### Features
+
+* cambio repositorio en versionrc ([684db22](https://github.com/mhv745/base-next/commit/684db220318d93643c62c87fb1ac956ba9e043c4))
+* inicio de versión ([7d9e8b2](https://github.com/mhv745/base-next/commit/7d9e8b23650ce6c479446a024af472eddc4f8057))
 
 ### 0.1.1 (2023-04-14)
 
