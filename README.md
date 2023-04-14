@@ -1,6 +1,7 @@
 # Repositorio base
 
 [X] Entorno
+[X] Favicon y head
 [ ] Políticas
 [ ] MongoDB
 [ ] Auth
