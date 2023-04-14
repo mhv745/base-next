@@ -34,10 +34,10 @@
             "hidden": true
         }
     ],
-    "commitUrlFormat": "https://github.com/mhv745/trivselgolf/commit/{{hash}}",
-    "compareUrlFormat": "https://github.com/mhv745/trivselgolf/compare/{{previousTag}}...{{currentTag}}",
+    "commitUrlFormat": "https://github.com/mhv745/base-next/commit/{{hash}}",
+    "compareUrlFormat": "https://github.com/mhv745/base-next/compare/{{previousTag}}...{{currentTag}}",
     "issuePrefixes": [
         "#"
     ],
-    "issueUrlFormat": "https://github.com/mhv745/trivselgolf/issues/{{id}}"
+    "issueUrlFormat": "https://github.com/mhv745/base-next/issues/{{id}}"
 }
