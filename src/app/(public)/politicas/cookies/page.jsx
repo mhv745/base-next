@@ -1,10 +1,10 @@
 import { setMetadata } from '@/src/app/metadatas'
-import { informacion } from '../informacionEmpresa'
+import { empresa } from '@/utils/data'
 
 export const metadata = {
     ...setMetadata({
         title: 'Políticas de cookies',
-        description: `Página de políticas de cookies de ${informacion.nombre}`,
+        description: `Página de políticas de cookies de ${empresa.nombre}`,
     }),
     robots: 'noindex, nofollow',
 }
@@ -19,7 +19,7 @@ export default function Legal() {
                 De acuerdo con la normativa vigente en materia de protección de datos así como en
                 materia de servicios de la sociedad de la información y de comercio electrónico, el
                 usuario acepta que los datos personales aportados en el momento de su registro, o
-                cualquier otro facilitado a {informacion.nombre} para su acceso a algunos de los
+                cualquier otro facilitado a {empresa.nombre} para su acceso a algunos de los
                 servicios del portal web (tienda, suscripción a foros, chats, concursos…), sean
                 incorporados a ficheros titularidad de esta Asociación, con la finalidad de
                 facilitar la prestación de los servicios solicitados, para la correcta
@@ -28,7 +28,7 @@ export default function Legal() {
                 portal que permitan diseñar mejoras en los servicios prestados, para la gestión de
                 tareas básicas de administración, así como para mantenerle informado, bien por
                 correo electrónico bien por cualquier otro medio, de novedades, relacionadas con{' '}
-                {informacion.nombre}.
+                {empresa.nombre}.
             </p>
 
             <p>
@@ -38,9 +38,9 @@ export default function Legal() {
             </p>
 
             <p>
-                {informacion.nombre} se compromete al cumplimiento de su obligación de secreto de
-                los datos de carácter personal y de su deber de tratarlos con confidencialidad, y
-                asume, a estos efectos, las medidas de índole técnica, organizativa y de seguridad
+                {empresa.nombre} se compromete al cumplimiento de su obligación de secreto de los
+                datos de carácter personal y de su deber de tratarlos con confidencialidad, y asume,
+                a estos efectos, las medidas de índole técnica, organizativa y de seguridad
                 necesarias para evitar su alteración, pérdida, tratamiento o acceso no autorizado,
                 de acuerdo con lo establecido en la Ley Orgánica 15/1999 de 13 de diciembre, de
                 Protección de Datos de Carácter Personal, y demás legislación aplicable.
@@ -48,15 +48,15 @@ export default function Legal() {
 
             <p>
                 El usuario responderá, en cualquier caso, de la veracidad de los datos facilitados,
-                reservándose {informacion.nombre} el derecho a excluir de los servicios registrados
-                a todo usuario que haya facilitado datos falsos, sin perjuicio de las demás acciones
+                reservándose {empresa.nombre} el derecho a excluir de los servicios registrados a
+                todo usuario que haya facilitado datos falsos, sin perjuicio de las demás acciones
                 que procedan en Derecho.
             </p>
 
             <p>
                 Cualquier usuario registrado puede en cualquier momento ejercer el derecho a
                 acceder, rectificar y, en su caso, cancelar sus datos de carácter personal
-                suministrados mediante petición escrita dirigida a {informacion.nombre}.
+                suministrados mediante petición escrita dirigida a {empresa.nombre}.
             </p>
 
             <h2>Cookies</h2>

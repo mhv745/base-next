@@ -1,11 +1,11 @@
 import { setMetadata } from '@/src/app/metadatas'
+import { empresa } from '@/utils/data'
 import Link from 'next/link'
-import { informacion } from '../informacionEmpresa'
 
 export const metadata = {
     ...setMetadata({
         title: 'Aviso legal',
-        description: `Página de aviso legal de ${informacion.nombre}`,
+        description: `Página de aviso legal de ${empresa.nombre}`,
     }),
     robots: 'noindex, nofollow',
 }
@@ -16,25 +16,25 @@ export default function Legal() {
             <h1>Aviso legal</h1>
             <h2>Información corporativa</h2>
             <p>
-                Datos Legales: {informacion.nombre}, en cumplimiento de la Ley 34/2002, de 11 de
-                julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico CIF:{' '}
-                {informacion.cif} Sede Social: {informacion.direccion}
+                Datos Legales: {empresa.nombre}, en cumplimiento de la Ley 34/2002, de 11 de julio,
+                de Servicios de la Sociedad de la Información y de Comercio Electrónico CIF:{' '}
+                {empresa.cif} Sede Social: {empresa.direccion}
             </p>
             <p>
                 Aviso legal sobre protección de datos y/o recogida del consentimiento para el
                 tratamiento de datos de carácter personal sobre sus datos Responsable:{' '}
-                {informacion.nombre} Finalidades del tratamiento: Mantener comunicación con
-                clientes, asociados, proveedores, empleados o informarle de novedades, ofertas
-                comerciales relacionadas con nuestra actividad. Legitimación: Por ejecución de un
-                contrato o en interés legítimo de {informacion.nombre} Procedencia de los datos: Los
-                datos que tratamos son siempre facilitados por el interesado. Categoría de los
-                datos: Información comercial y datos identificativos. Destinatarios de sus datos:
-                datos personales se transferirán a los siguientes destinatarios:
+                {empresa.nombre} Finalidades del tratamiento: Mantener comunicación con clientes,
+                asociados, proveedores, empleados o informarle de novedades, ofertas comerciales
+                relacionadas con nuestra actividad. Legitimación: Por ejecución de un contrato o en
+                interés legítimo de {empresa.nombre} Procedencia de los datos: Los datos que
+                tratamos son siempre facilitados por el interesado. Categoría de los datos:
+                Información comercial y datos identificativos. Destinatarios de sus datos: datos
+                personales se transferirán a los siguientes destinatarios:
             </p>
             <ol style={{ listStyleType: 'number' }}>
                 <li>
                     Cualquier tercero que proporcione servicios de tratamiento de datos a{' '}
-                    {informacion.nombre} para el normal desarrollo de sus funciones.
+                    {empresa.nombre} para el normal desarrollo de sus funciones.
                 </li>
                 <li>
                     A terceras empresas, como asesorías contables, fiscales, crédito y caución, etc…
@@ -42,8 +42,8 @@ export default function Legal() {
                 </li>
                 <li>
                     El usuario acepta que todos sus datos de carácter personal sean íntegramente
-                    cedidos a {informacion.nombre} desde el momento en que el usuario haya iniciado
-                    la contratación del servicio de pago aplazado ofrecido por ésta última en el
+                    cedidos a {empresa.nombre} desde el momento en que el usuario haya iniciado la
+                    contratación del servicio de pago aplazado ofrecido por ésta última en el
                     momento de elegir la forma de pago. Esta aceptación se extiende a terceras
                     entidades que tuvieran que acceder a los ficheros para el buen fin del contrato.
                 </li>
@@ -160,12 +160,12 @@ export default function Legal() {
                 debidamente respetados, puede dirigirse a la Agencia Española de Protección de
                 Datos.
             </p>
-            <h2>{informacion.nombre}</h2>
+            <h2>{empresa.nombre}</h2>
             <p>
                 El usuario acepta que todos sus datos de carácter personal sean íntegramente cedidos
-                a {informacion.nombre} desde el momento en que el usuario haya iniciado la
-                contratación del servicio de pago aplazado ofrecido por ésta última en el momento de
-                elegir la forma de pago.
+                a {empresa.nombre} desde el momento en que el usuario haya iniciado la contratación
+                del servicio de pago aplazado ofrecido por ésta última en el momento de elegir la
+                forma de pago.
             </p>
             <p>
                 Esta aceptación se extiende a terceras entidades que tuvieran que acceder a los
@@ -180,7 +180,7 @@ export default function Legal() {
             <p>
                 Si usted no desea recibir nuestra información, póngase en contacto con nosotros
                 enviando un correo electrónico a la siguiente dirección:
-                <Link href={`mailto:${informacion.email}`}>{informacion.email}</Link>
+                <Link href={`mailto:${empresa.email}`}>{empresa.email}</Link>
             </p>
         </div>
     )

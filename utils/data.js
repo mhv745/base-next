@@ -10,3 +10,10 @@ export const data = {
     },
     analytics: '',
 }
+
+export const empresa = {
+    nombre: data.siteName.toUpperCase(),
+    cif: 'X-12345678',
+    direccion: 'C/',
+    email: 'example@example.com',
+}

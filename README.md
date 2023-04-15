@@ -8,6 +8,11 @@
 [ ] Auth
 [ ] SendGrid
 
+## Configuración
+
+-   Actualizar los datos en `utils/data.js`
+-   Actualizar variables de entorno
+
 ## Comandos
 
 -   `yarn` - Instalar dependencias

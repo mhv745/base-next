@@ -1,11 +1,11 @@
 import { setMetadata } from '@/src/app/metadatas'
+import { empresa } from '@/utils/data'
 import Link from 'next/link'
-import { informacion } from '../informacionEmpresa'
 
 export const metadata = {
     ...setMetadata({
         title: 'Políticas de privacidad',
-        description: `Página de políticas de privacidad de ${informacion.nombre}`,
+        description: `Página de políticas de privacidad de ${empresa.nombre}`,
     }),
     robots: 'noindex, nofollow',
 }
