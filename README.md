@@ -1,13 +1,13 @@
 # Repositorio base
 
-[X] Entorno
-[X] Favicon y head
-[X] Políticas
-[X] Analytics
-[X] Toast
-[ ] MongoDB
-[ ] Auth
-[ ] SendGrid
+-   [x] Entorno
+-   [x] Favicon y head
+-   [x] Políticas
+-   [x] Analytics
+-   [x] Toast
+-   [ ] MongoDB
+-   [ ] Auth
+-   [ ] SendGrid
 
 ## Configuración
 
