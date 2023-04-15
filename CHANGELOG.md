@@ -1,4 +1,12 @@
 CHANGELOG
+## [1.3.0](https://github.com/mhv745/base-next/compare/v1.2.0...v1.3.0) (2023-04-15)
+
+
+### Features
+
+* readme ([679cf5e](https://github.com/mhv745/base-next/commit/679cf5e36b16461e6705d2cd196263c4d88bdc8a))
+* toast ([a795e99](https://github.com/mhv745/base-next/commit/a795e995957c077c0438bb5a2785cd7ec453ab9a))
+
 ## [1.2.0](https://github.com/mhv745/base-next/compare/v1.1.0...v1.2.0) (2023-04-15)
 
 
