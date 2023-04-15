@@ -3,7 +3,7 @@ import Link from 'next/link'
 export default function Footer() {
     return (
         <footer>
-            <div className="container m-auto flex justify-between">
+            <div className="container m-auto flex justify-between pr-10 xl:pr-0">
                 <p>© {new Date().getFullYear()} - Todos los derechos reservados</p>
                 <p>
                     powered by{' '}

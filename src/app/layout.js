@@ -1,4 +1,5 @@
 import '../../styles/styles.scss'
+import Cookies from './components/Cookies'
 import { setMetadata } from './metadatas'
 
 const AUTHOR = 'Miguel Hernández Von Hartmann'
@@ -25,7 +26,10 @@ export default function RootLayout({ children }) {
     return (
         <html lang="es">
             <head></head>
-            <body>{children}</body>
+            <body>
+                <>{children}</>
+                <Cookies />
+            </body>
         </html>
     )
 }
