@@ -14,7 +14,7 @@ main {
 }
 
 footer {
-    @apply bg-gray-100 text-center text-xs p-3;
+    @apply bg-gray-100;
 }
 
 img {
@@ -45,4 +45,9 @@ a {
 
 small {
     @apply text-xs;
+}
+
+ul,
+ol {
+    @apply ml-4;
 }

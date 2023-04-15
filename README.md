@@ -4,6 +4,7 @@
 [X] Favicon y head
 [X] Políticas
 [X] Analytics
+[X] Toast
 [ ] MongoDB
 [ ] Auth
 [ ] SendGrid

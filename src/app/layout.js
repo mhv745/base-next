@@ -1,4 +1,6 @@
+import 'react-toastify/dist/ReactToastify.css'
 import '../../styles/styles.scss'
+import Providers from './components/Providers'
 import Analytics from './components/footer/Analytics'
 import Cookies from './components/footer/Cookies'
 import { setMetadata } from './metadatas'
@@ -28,9 +30,11 @@ export default function RootLayout({ children }) {
         <html lang="es">
             <head></head>
             <body>
-                <>{children}</>
-                <Cookies />
-                <Analytics />
+                <Providers>
+                    <>{children}</>
+                    <Cookies />
+                    <Analytics />
+                </Providers>
             </body>
         </html>
     )
