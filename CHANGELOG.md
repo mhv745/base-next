@@ -1,4 +1,13 @@
 CHANGELOG
+## [1.2.0](https://github.com/mhv745/base-next/compare/v1.1.0...v1.2.0) (2023-04-15)
+
+
+### Features
+
+* analytics ([bdbd2f3](https://github.com/mhv745/base-next/commit/bdbd2f34ddb58021ab403db7febff5de428cd53b))
+* cookies y konami code ([b640bad](https://github.com/mhv745/base-next/commit/b640bad83dc870d5ca08ae7d5d28395ae519ddb0))
+* políticas ([975cbb6](https://github.com/mhv745/base-next/commit/975cbb6b206a764791b2489ca347033bcfc3c73a))
+
 ## [1.1.0](https://github.com/mhv745/base-next/compare/v0.1.1...v1.1.0) (2023-04-14)
 
 
