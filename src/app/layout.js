@@ -1,5 +1,5 @@
 import '../../styles/styles.scss'
-import Cookies from './components/Cookies'
+import Cookies from './components/cookies/Cookies'
 import { setMetadata } from './metadatas'
 
 const AUTHOR = 'Miguel Hernández Von Hartmann'
