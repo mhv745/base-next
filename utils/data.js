@@ -8,4 +8,5 @@ export const data = {
         width: 512,
         height: 214,
     },
+    analytics: '',
 }

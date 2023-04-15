@@ -3,6 +3,7 @@
 [X] Entorno
 [X] Favicon y head
 [X] Políticas
+[X] Analytics
 [ ] MongoDB
 [ ] Auth
 [ ] SendGrid
