@@ -1,4 +1,13 @@
 CHANGELOG
+## [1.4.0](https://github.com/mhv745/base-next/compare/v1.3.0...v1.4.0) (2023-04-17)
+
+
+### Features
+
+* arreglado readme ([202fa67](https://github.com/mhv745/base-next/commit/202fa6702847b2843cecc8493c32f231c021805f))
+* autenticación ([2c569c5](https://github.com/mhv745/base-next/commit/2c569c5dbd8c47b114be489354d36b2c91225b32))
+* wip autenticación ([e830d70](https://github.com/mhv745/base-next/commit/e830d70cea018040ceabf444b9824e6dcb5ee5b1))
+
 ## [1.3.0](https://github.com/mhv745/base-next/compare/v1.2.0...v1.3.0) (2023-04-15)
 
 
