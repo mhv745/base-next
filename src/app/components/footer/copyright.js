@@ -31,7 +31,7 @@ function useK(action = () => {}, { code = K } = {}) {
     }, [onKeyUp])
 }
 
-const Copy = () => {
+export default function Copyright() {
     const [show, setShow] = useState(false)
     useK(() => {
         setShow(true)
@@ -77,5 +77,3 @@ const Copy = () => {
         </div>
     )
 }
-
-export default Copy

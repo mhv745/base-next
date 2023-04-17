@@ -1,4 +1,4 @@
-import { data } from '@/utils/data'
+import { data } from '@/src/utils/data'
 
 export const setMetadata = ({
     title = data.siteName,

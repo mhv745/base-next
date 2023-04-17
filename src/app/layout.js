@@ -1,8 +1,8 @@
 import 'react-toastify/dist/ReactToastify.css'
-import '../../styles/styles.scss'
-import Providers from './components/Providers'
-import Analytics from './components/footer/Analytics'
-import Cookies from './components/footer/Cookies'
+import '../styles/styles.scss'
+import Analytics from './components/footer/analytics'
+import Cookies from './components/footer/cookies'
+import Providers from './components/providers'
 import { setMetadata } from './metadatas'
 
 const AUTHOR = 'Miguel Hernández Von Hartmann'
@@ -32,9 +32,9 @@ export default function RootLayout({ children }) {
             <body>
                 <Providers>
                     <>{children}</>
-                    <Cookies />
-                    <Analytics />
                 </Providers>
+                <Cookies />
+                <Analytics />
             </body>
         </html>
     )

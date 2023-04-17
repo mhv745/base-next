@@ -9,6 +9,7 @@ export const data = {
         height: 214,
     },
     analytics: '',
+    email: '',
 }
 
 export const empresa = {

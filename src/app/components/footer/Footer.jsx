@@ -14,7 +14,7 @@ export default function Footer() {
                         <Link
                             title="Enlace al aviso legal"
                             className={`block ${textClass} py-4`}
-                            href="/politicas/terminos">
+                            href="/politicas/legal">
                             legal
                         </Link>
                     </li>

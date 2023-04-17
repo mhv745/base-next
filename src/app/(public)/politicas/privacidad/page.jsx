@@ -1,5 +1,5 @@
 import { setMetadata } from '@/src/app/metadatas'
-import { empresa } from '@/utils/data'
+import { empresa } from '@/src/utils/data'
 import Link from 'next/link'
 
 export const metadata = {

@@ -1,9 +1,9 @@
 'use client'
 
-import { data } from '@/utils/data'
+import { data } from '@/src/utils/data'
 import Link from 'next/link'
 import { useCallback, useEffect, useState } from 'react'
-import Copy from './Copy'
+import Copyright from './copyright'
 
 export default function Cookies() {
     const [aceptadas, setAceptadas] = useState(true)
@@ -66,7 +66,7 @@ export default function Cookies() {
                     </button>
                 </div>
             )}
-            <Copy />
+            <Copyright />
         </>
     )
 }

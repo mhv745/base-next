@@ -1,6 +1,6 @@
 'use client'
 
-import { data } from '@/utils/data'
+import { data } from '@/src/utils/data'
 import Script from 'next/script'
 
 export default function Analytics() {

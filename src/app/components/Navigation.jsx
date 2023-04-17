@@ -1,4 +1,4 @@
-import { data } from '@/utils/data'
+import { data } from '@/src/utils/data'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -11,6 +11,7 @@ export default function Navigation() {
                     alt="Enlace a página de inicio"
                     className="block max-w-[100px] md:max-w-[150px]">
                     <Image
+                        priority
                         src={data.logo.src}
                         alt={`Logotipo de ${data.siteName}`}
                         width={data.logo.width}
