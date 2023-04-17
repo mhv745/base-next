@@ -54,6 +54,7 @@ export async function createUser({ name, email, password }) {
             name,
             email,
             password: passwordHash,
+            role: 'user',
         })
         return parseUser(newUser)
     } catch (error) {
@@ -143,7 +144,6 @@ export async function resetPassword(email) {
         expiresIn: '1d',
     })
 
-    console.log('password hash: ', hash)
     await Users.findByIdAndUpdate(user.id, {
         resetPasswordToken: hash,
     })

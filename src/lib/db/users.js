@@ -5,7 +5,7 @@ const usersSchema = new Schema(
         name: { type: String, required: true, trim: true },
         email: { type: String, required: true, unique: true, trim: true },
         password: { type: String, required: true, trim: true },
-        isAdmin: { type: Boolean, required: true, default: false },
+        role: { type: String, required: true, default: 'user', trim: true },
         resetPasswordToken: { type: String, trim: true },
     },
     {
@@ -21,7 +21,7 @@ export const parseUser = (user) => {
         id: user._id.toString(),
         name: user.name,
         email: user.email,
-        isAdmin: user.isAdmin,
+        role: user.role,
         resetPasswordToken: user.resetPasswordToken,
         createdAt: user.createdAt?.toISOString() || '',
         updatedAt: user.updatedAt?.toISOString() || '',

@@ -22,7 +22,6 @@ export const authOptions = {
                 try {
                     const { email, password } = credentials
                     const user = await login(email, password)
-                    console.log('user: ', user)
                     return user
                 } catch (error) {
                     console.error('Error autorizando', error)
@@ -31,17 +30,19 @@ export const authOptions = {
         }),
     ],
     callbacks: {
-        async jwt(token, user) {
-            console.log('jwt: ', user, token)
-
+        async jwt({ token, user }) {
             if (user) {
-                token.user = { ...user }
+                return {
+                    id: user.id,
+                    name: user.name,
+                    email: user.email,
+                    role: user.role,
+                }
             }
             return token
         },
-        async session(session, token) {
-            console.log('session: ', session, token)
-            session.user = token.user
+        async session({ session, token }) {
+            session.user = token
             return session
         },
     },

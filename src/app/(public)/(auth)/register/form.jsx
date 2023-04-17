@@ -20,9 +20,9 @@ export default function RegisterForm() {
         formState: { errors },
     } = useForm({
         defaultValues: {
-            name: '',
-            email: '',
-            password: '',
+            name: 'Miguel',
+            email: 'miguel@miguel.com',
+            password: 'Miguel123',
         },
     })
 
@@ -47,7 +47,6 @@ export default function RegisterForm() {
                 password: data.password,
                 redirect: false,
             })
-
             if (signResult.error) {
                 throw new Error(
                     signResult.error == 'CredentialsSignin'
@@ -124,16 +123,16 @@ export default function RegisterForm() {
                         })}
                     />
 
-                    <button type="submit" className="bg-green-800 text-white rounded py-1">
-                        Acceder
+                    <button
+                        disabled={loading}
+                        type="submit"
+                        className="bg-green-800 text-white rounded py-1">
+                        Crear mi cuenta
                     </button>
                     {error && <span className="text-red-500 text-sm mb-0">{error}</span>}
                 </form>
-                <Link href="/remember" title="Ir a la página de recuperar contraseña" replace>
-                    He olvidado la contraseña
-                </Link>
-                <Link href="/register" title="Ir a la página de registro" replace>
-                    ¿No tienes cuenta? Regístrate
+                <Link href="/login" title="Ir a la página de registro" replace>
+                    ¿Ya tienes cuenta? Iniciar sesión
                 </Link>
             </div>
         </div>

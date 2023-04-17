@@ -4,7 +4,6 @@ export default async function handleRequest(req, res) {
     switch (req.method) {
         case 'GET': {
             try {
-                console.log(req.query, req.params)
                 const { id } = req.query
                 const user = await getUser(id)
                 return res.status(200).json({ user, ok: true })
@@ -39,7 +38,7 @@ export default async function handleRequest(req, res) {
         }
 
         default: {
-            res.setHeader('Allow', ['GET'])
+            res.setHeader('Allow', ['GET', 'PUT', 'DELETE'])
             res.status(405).end(`Method ${req.method} Not Allowed`)
         }
     }

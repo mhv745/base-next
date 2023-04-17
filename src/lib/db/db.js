@@ -2,7 +2,7 @@ import mongoose from 'mongoose'
 
 const connectDB = () => {
     const MONGODB = process.env.MONGODB
-    console.log('MONGO URI', MONGODB)
+
     try {
         if (!mongoose.connections[0].readyState) {
             mongoose.set('strictQuery', false)
