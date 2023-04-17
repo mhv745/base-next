@@ -5,9 +5,9 @@
 -   [x] Políticas
 -   [x] Analytics
 -   [x] Toast
--   [ ] MongoDB
--   [ ] Auth
--   [ ] SendGrid
+-   [x] MongoDB
+-   [x] Auth
+-   [x] SendGrid
 
 ## Configuración
 

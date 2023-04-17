@@ -9,7 +9,7 @@ export const data = {
         height: 214,
     },
     analytics: '',
-    email: '',
+    email: process.env.NEXT_PUBLIC_EMAIL,
 }
 
 export const empresa = {

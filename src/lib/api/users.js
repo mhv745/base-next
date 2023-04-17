@@ -107,34 +107,21 @@ export async function login(email, password) {
     return parseUser(user)
 }
 
-export const confirmToken = async (token) => {
-    const data = jwt.verify(token, process.env.NEXTAUTH_SECRET)
-    if (!data) {
-        throw new Error('El token no es válido.')
-    }
-    await connectDB()
-    const user = await Users.findById(data.id).lean().exec()
-    if (!user) {
-        throw new Error('El usuario no existe.')
-    }
-    if (user.resetPasswordToken !== token) {
-        throw new Error('El token no es válido.')
-    }
-    return parseUser(user)
-}
-
-export async function resetPassword(email) {
+/**
+ * Envía un correo con un token para recuperar la contraseña
+ */
+export async function remember(email) {
     if (!email || !isValidEmail(email)) {
         throw new Error('El email no es válido.')
     }
 
     await connectDB()
 
-    let user = await Users.findOne({ email }).lean().exec()
-    user = parseUser(user)
+    let user = await Users.findOne({ email }).exec()
     if (!user) {
         throw new Error('El usuario no existe.')
     }
+    user = parseUser(user)
 
     const token = {
         email: email,
@@ -150,12 +137,41 @@ export async function resetPassword(email) {
 
     try {
         await notificarRecuperarPassword(user, hash)
-        return 'Se envió un email para recuperar la contraseña. Si no lo ha recibido, compruebe la bandeja de spam.'
+        return `Se ha enviado un email a ${email} con indicaciones para recuperar su contraseña. Si no lo recibe, compruebe su bandeja de spam.`
     } catch (error) {
-        throw new Error('No se pudo enviar el email para recuperar la contraseña.')
+        throw new Error(
+            'No se pudo enviar el email para recuperar la contraseña. Intentelo más tarde.',
+        )
     }
 }
 
+/**
+ * Comprueba si el token es válido y devuelve el usuario
+ */
+export const confirmToken = async (token) => {
+    let data
+    try {
+        data = jwt.verify(token, process.env.NEXTAUTH_SECRET)
+    } catch (error) {
+        throw new Error('El enlace ha caducado o no es válido.')
+    }
+    if (!data) {
+        throw new Error('El token no es válido.')
+    }
+    await connectDB()
+    const user = await Users.findById(data.id).lean().exec()
+    if (!user) {
+        throw new Error('El usuario no existe.')
+    }
+    if (user.resetPasswordToken !== token) {
+        throw new Error('El token no es válido.')
+    }
+    return parseUser(user)
+}
+
+/**
+ * Cambia la contraseña del usuario
+ */
 export const changePassword = async (user, newPassword) => {
     if (!newPassword || newPassword.length < 6 || newPassword.length > 20)
         throw { message: 'La contraseña debe tener entre 6 y 20 caracteres.', code: 422 }
@@ -178,7 +194,7 @@ async function notificarRecuperarPassword(user, token) {
         throw new Error('El usuario no tiene email.')
     }
 
-    const link = `${process.env.NEXT_PUBLIC_URL}/recuperar/${token}`
+    const link = `${process.env.NEXT_PUBLIC_URL}/remember/${token}`
 
     const text = `
     Hola ${user.name},\n\n

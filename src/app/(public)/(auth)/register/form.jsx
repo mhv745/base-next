@@ -20,9 +20,9 @@ export default function RegisterForm() {
         formState: { errors },
     } = useForm({
         defaultValues: {
-            name: 'Miguel',
-            email: 'miguel@miguel.com',
-            password: 'Miguel123',
+            name: '',
+            email: '',
+            password: '',
         },
     })
 
