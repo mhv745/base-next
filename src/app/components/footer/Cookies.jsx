@@ -19,7 +19,7 @@ export default function Cookies() {
     }, [])
 
     const cancelar = useCallback(() => {
-        document.cookie = 'cookies=0; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/'
+        document.cookie = 'cookies= ; expires=Fri, 31 Dec 1971 23:59:59 GMT; path=/'
         setAceptadas(false)
     }, [])
 
@@ -27,7 +27,6 @@ export default function Cookies() {
         <>
             {!aceptadas ? (
                 <div
-                    aria-hidden
                     className="fixed bottom-8 right-4 text-xs p-3 rounded shadow z-50 max-w-xs border"
                     style={{
                         display: aceptadas ? 'none' : 'block',
@@ -57,7 +56,7 @@ export default function Cookies() {
                     </div>
                 </div>
             ) : (
-                <div aria-hidden className="fixed bottom-1 right-1">
+                <div className="fixed bottom-1 right-1">
                     <button
                         aria-label="Eliminar cookies instaladas"
                         className="block"

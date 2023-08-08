@@ -1,14 +1,14 @@
 import Link from 'next/link'
 
-const textClass = 'text-xs'
+const textClass = 'text-xs mb-0'
 
 export default function Footer() {
     return (
         <footer>
-            <ul className="container m-auto flex flex-col md:flex-row items-center md:justify-between pr-10 xl:pr-0">
-                <li className={textClass}>
+            <div className="container m-auto flex flex-col md:flex-row items-center md:justify-between pr-10 xl:pr-0">
+                <p className={textClass}>
                     © {new Date().getFullYear()} - Todos los derechos reservados
-                </li>
+                </p>
                 <ul className="ml-0 flex gap-2 text-xs">
                     <li className={textClass}>
                         <Link
@@ -35,7 +35,7 @@ export default function Footer() {
                         </Link>
                     </li>
                 </ul>
-                <li className={`text-xs whitespace-nowrap`}>
+                <p className={`text-xs whitespace-nowrap mb-0`}>
                     <span>powered by </span>
                     <Link
                         target="_blank"
@@ -45,8 +45,8 @@ export default function Footer() {
                         href="https://hernandezmiguel.es">
                         Miguel Hernandez
                     </Link>
-                </li>
-            </ul>
+                </p>
+            </div>
         </footer>
     )
 }
